@@ -1,0 +1,7 @@
+imapclient
+python-dotenv
+pydantic-settings
+langchain-openai
+langchain-core
+langchain-text-splitters
+langchain
