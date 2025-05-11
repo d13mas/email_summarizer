@@ -3,11 +3,11 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     gmail_user: str
     gmail_app_password: str
-    localai_model: str = "llama-3-8b-instruct-q4_K_M"
+    localai_model: str = "meta-llama-3-8b-instruct.Q5_K_M" #"llama-3-8b-instruct-q4_K_M"
     localai_base_url: str = "http://localhost:8080/v1"
     search_subject: str = ""
-    since_date: str = "2025-05-01"
-    before_date: str = "2025-05-11"
+    since_date: str = "01-May-2025"
+    before_date: str = "11-May-2025"
 
     class Config:
         env_file = ".env"

@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock, patch
 import email
-from email_summarizer import email_client
+from email_summarizer_pkg import email_client
 
 class TestEmailClient(unittest.TestCase):
     @patch('email_summarizer.email_client.IMAPClient')

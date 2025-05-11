@@ -2,7 +2,7 @@ from langchain_openai import ChatOpenAI
 from langchain_core.documents import Document
 from langchain.chains.summarize import load_summarize_chain
 from langchain_text_splitters import CharacterTextSplitter
-from .email_summarizer.config import settings
+from email_summarizer_pkg.config import settings
 
 def initialize_llm():
     return ChatOpenAI(

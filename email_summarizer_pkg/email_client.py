@@ -1,7 +1,7 @@
 import email
 from imapclient import IMAPClient
 from datetime import datetime
-from .email_summarizer.config import settings
+from email_summarizer_pkg.config import settings
 
 def connect_imap():
     client = IMAPClient('imap.gmail.com', ssl=True)
@@ -11,7 +11,7 @@ def connect_imap():
 
 def fetch_emails(client):
     search_criteria = [
-        'SUBJECT', settings.search_subject,
+        #'SUBJECT', settings.search_subject,
         'SINCE', settings.since_date,
         'BEFORE', settings.before_date
     ]
