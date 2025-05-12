@@ -10,12 +10,15 @@ def connect_imap():
     return client
 
 def fetch_emails(client):
-    search_criteria = [
-        #'SUBJECT', settings.search_subject,
-        'SINCE', settings.since_date,
-        'BEFORE', settings.before_date
-    ]
-    message_ids = client.search(search_criteria)
+    client.select_folder('INBOX', readonly=True)
+    message_ids = client.search(['ALL'])
+    # print("Found message IDs:", message_ids)
+    # search_criteria = [
+    #     #'SUBJECT', settings.search_subject,
+    #     'SINCE', settings.since_date,
+    #     'BEFORE', settings.before_date
+    # ]
+    # message_ids = client.search(search_criteria)
     return client.fetch(message_ids, ['RFC822'])
 
 def parse_email(msg_data):
