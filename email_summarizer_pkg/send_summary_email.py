@@ -2,11 +2,12 @@ import os
 import smtplib
 import ssl
 from email.message import EmailMessage
+from email_summarizer_pkg.config import settings
 
 def send_summary_email(summary_text, subject="Your Summarized Emails"):
-    sender_email = os.environ["EMAIL_USERNAME"]
-    sender_password = os.environ["EMAIL_APP_PASSWORD"]
-    recipient_email = os.environ.get("EMAIL_RECIPIENT", sender_email)  # Default to sender if not set
+    sender_email = settings.gmail_user
+    sender_password = settings.gmail_app_password
+    recipient_email = settings.email_recipient
 
     msg = EmailMessage()
     msg['Subject'] = subject

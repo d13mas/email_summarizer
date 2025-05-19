@@ -9,7 +9,7 @@ def summarize_text(text: str) -> str:
     """Summarizes the input text using OpenAI's GPT API."""
     try:
         response = client.chat.completions.create(
-            model="gpt-4",  # or "gpt-3.5-turbo"
+            model="gpt-3.5-turbo-0125",
             messages=[
                 {
                     "role": "system",
@@ -21,7 +21,7 @@ def summarize_text(text: str) -> str:
                 {"role": "user", "content": text},
             ],
             temperature=0.5,
-            max_tokens=800,
+            max_tokens=4096,
         )
         return response.choices[0].message.content.strip()
 

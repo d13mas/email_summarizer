@@ -9,6 +9,7 @@ def connect_imap():
     client.select_folder('INBOX', readonly=True)
     return client
 
+# TO DO = Improve search criteria to filter by UNSEEN messages AND specific senders (from a list)
 def fetch_emails(client):
     client.select_folder('INBOX', readonly=True)
     message_ids = client.search(['ALL'])
