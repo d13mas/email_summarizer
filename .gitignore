@@ -12,6 +12,7 @@ env/
 pip-selfcheck.json
 
 # Local configuration files
+.env
 *.env
 .env.*
 !.env.example

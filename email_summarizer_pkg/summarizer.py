@@ -1,25 +1,29 @@
-from langchain_openai import ChatOpenAI
-from langchain_core.documents import Document
-from langchain.chains.summarize import load_summarize_chain
-from langchain_text_splitters import CharacterTextSplitter
+# summarizer.py
+
+from openai import OpenAI
 from email_summarizer_pkg.config import settings
 
-def initialize_llm():
-    return ChatOpenAI(
-        temperature=0.1,
-        model=settings.localai_model,
-        base_url=settings.localai_base_url,
-        api_key="none"  # LocalAI does not require a real key
-    )
+client = OpenAI(api_key=settings.openai_api_key)
 
 def summarize_text(text: str) -> str:
-    text_splitter = CharacterTextSplitter(
-        chunk_size=3000,
-        chunk_overlap=500
-    )
-    docs = [Document(page_content=chunk) for chunk in text_splitter.split_text(text)]
-    summary_chain = load_summarize_chain(
-        initialize_llm(),
-        chain_type="map_reduce"
-    )
-    return summary_chain.invoke(docs)['output_text']
+    """Summarizes the input text using OpenAI's GPT API."""
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4",  # or "gpt-3.5-turbo"
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "You are a helpful assistant that summarizes emails. "
+                        "Return a clear, concise summary that is no more than a 5-minute read."
+                    ),
+                },
+                {"role": "user", "content": text},
+            ],
+            temperature=0.5,
+            max_tokens=800,
+        )
+        return response.choices[0].message.content.strip()
+
+    except Exception as e:
+        return f"Error during summarization: {str(e)}"
