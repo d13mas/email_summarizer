@@ -13,3 +13,8 @@ It narrows down the list of emails by filtering by subject and date range.
 
     - Create titles
     - Bullet points
+
+5. Create a Flask and React app to publish on a website for general use. This will need:
+    5.1. Account management
+    5.2. Authentication
+    5.3. Encripted Settings: email and app password
