@@ -14,7 +14,10 @@ def summarize_text(text: str) -> str:
                 {
                     "role": "system",
                     "content": (
-                        settings.prompt
+                        "You are a helpful assistant that summarizes emails."
+                        "Return a clear, concise summary that is no more than a 5-minute read."
+                        "Use resources as you see fit, like adding titles to paragraphs, or using bullet points, or numbered lists, etc"
+                        "Whatever you find useful to make it clear, emphasize the concept and speed up readability."
                     ),
                 },
                 {"role": "user", "content": text},

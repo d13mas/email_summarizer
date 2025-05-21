@@ -13,7 +13,6 @@ class Settings(BaseSettings):
     since_date: str = "01-May-2025"
     before_date: str = "11-May-2025"
     email_recipient: str
-    prompt: str
 
     class Config:
         env_file = ".env"

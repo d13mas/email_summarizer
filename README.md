@@ -4,6 +4,19 @@ Summarizes emails received in a Gmail inbox. Created to reduce the time to read 
 
 It narrows down the list of emails by filtering by subject and date range.
 
+## Config
+
+1. Create a `.env` file in your root folder.
+2. Populate the file with the following variables:
+
+    - gmail_user
+    - gmail_app_password
+    - email_recipient
+    - openai_api_key
+    - search_subject
+    - since_date
+    - before_date
+
 ## TO DO
 
 1. Improve search criteria to filter by UNSEEN messages AND specific senders (from a list).
