@@ -72,16 +72,6 @@ This includes:
 
 ---
 
-## 📤 Output
-
-Summaries are sent via email to the configured `email_recipient`. In the future, you may optionally:
-
-- Store summaries in a Google Sheet or Markdown file
-- Archive source emails
-- Trigger webhook or API notifications
-
----
-
 ## 📝 TO DO
 
 1. **Web Frontend (Flask + React)**:
@@ -100,3 +90,10 @@ Summaries are sent via email to the configured `email_recipient`. In the future,
    - Optionally export summaries to database or file system
 
 ---
+
+## 📤 Output
+
+Summaries are sent via email to the configured `email_recipient`. In the future, you may optionally:
+- Store summaries in a Google Sheet or Markdown file
+- Archive source emails
+- Trigger webhook or API notifications

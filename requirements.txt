@@ -1,9 +1,5 @@
 imapclient
 python-dotenv
 pydantic-settings
-langchain-openai
-langchain-core
-langchain-text-splitters
-langchain
 openai>=1.0.0
-python-dotenv
+tiktoken
