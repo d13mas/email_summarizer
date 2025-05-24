@@ -35,12 +35,12 @@
 
 1. Create a `.env` file in your root project directory:
 
-    \`\`\`env
+    ```env
     gmail_user=your-gmail-address@gmail.com
     gmail_app_password=your-gmail-app-password
     email_recipient=where-you-want-to-receive-summaries@example.com
     openai_api_key=sk-xxxxxxxxxxxxxxxxxxxxx
-    \`\`\`
+    ```
 
 2. Edit the `config.py` file (optional):
    - Add or modify the `allowed_senders` list to include addresses whose emails should be summarized:
