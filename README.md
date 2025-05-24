@@ -72,6 +72,16 @@ Summaries are sent via email to the configured `email_recipient`. In the future,
 - Archive source emails
 - Trigger webhook or API notifications
 
+## ▶️ Running the App
+
+Make sure you've completed the setup in your `.env` and `config.py` files.
+
+Then run the program using:
+
+```bash
+python -m email_summarizer_pkg.main
+```
+
 ## 📝 TO DO
 
 1. **Web Frontend (Flask + React)**:
