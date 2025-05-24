@@ -45,13 +45,13 @@
 2. Edit the `config.py` file (optional):
    - Add or modify the `allowed_senders` list to include addresses whose emails should be summarized:
 
-     \`\`\`python
+     ```python
      allowed_senders = [
          "newsletter@source.com",
          "author@substack.com",
          "daily@digest.com"
      ]
-     \`\`\`
+     ```
 
 ---
 
@@ -59,9 +59,9 @@
 
 Install the dependencies with:
 
-\`\`\`bash
+```bash
 pip install -r requirements.txt
-\`\`\`
+```
 
 This includes:
 - `imapclient`
@@ -97,6 +97,6 @@ Summaries are sent via email to the configured `email_recipient`. In the future,
 
 3. **Logging and error tracking**:
    - Add structured logs and retry logic
-   - Optionally export summaries to database or file system
+   - Optionally export summaries to a database or file system
 
 ---
