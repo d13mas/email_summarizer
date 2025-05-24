@@ -2,8 +2,6 @@
 
 **Email Summarizer** automatically summarizes emails received in a Gmail inbox using OpenAI's GPT-3.5 Turbo model. It was originally designed to condense long-form newsletters, but it can be used for any kind of content.
 
----
-
 ## 🚀 How It Works
 
 1. **Connects to Gmail via IMAP**:
@@ -29,8 +27,6 @@
    - Only emails that are successfully summarized and sent are marked as **read**.
    - This prevents reprocessing on future runs.
 
----
-
 ## ⚙️ Configuration
 
 1. Create a `.env` file in your root project directory:
@@ -53,8 +49,6 @@
      ]
      ```
 
----
-
 ## 🧪 Requirements
 
 Install the dependencies with:
@@ -70,8 +64,6 @@ This includes:
 - `pydantic`
 - `python-dotenv`
 
----
-
 ## 📤 Output
 
 Summaries are sent via email to the configured `email_recipient`. In the future, you may optionally:
@@ -79,8 +71,6 @@ Summaries are sent via email to the configured `email_recipient`. In the future,
 - Store summaries in a Google Sheet or Markdown file
 - Archive source emails
 - Trigger webhook or API notifications
-
----
 
 ## 📝 TO DO
 
