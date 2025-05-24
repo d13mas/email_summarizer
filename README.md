@@ -88,5 +88,3 @@ Summaries are sent via email to the configured `email_recipient`. In the future,
 3. **Logging and error tracking**:
    - Add structured logs and retry logic
    - Optionally export summaries to a database or file system
-
----
