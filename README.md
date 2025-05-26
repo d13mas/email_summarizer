@@ -4,13 +4,12 @@
 
 ## 📚 Table of Contents
 
-- [✉️ Email Summarizer](#️-email-summarizer)
 - [🚀 How It Works](#-how-it-works)
 - [⚙️ Configuration](#️-configuration)
 - [🧪 Requirements](#-requirements)
+- [📤 Output](#-output)
 - [▶️ Running the App](#️-running-the-app)
 - [📝 TO DO](#-to-do)
-- [📤 Output](#-output)
 
 ## 🚀 How It Works
 
