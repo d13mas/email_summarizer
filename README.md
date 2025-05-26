@@ -2,6 +2,16 @@
 
 **Email Summarizer** automatically summarizes emails received in a Gmail inbox using OpenAI's GPT-3.5 Turbo model. It was originally designed to condense long-form newsletters, but it can be used for any kind of content.
 
+## 📚 Table of Contents
+
+- [✉️ Email Summarizer](#️-email-summarizer)
+- [🚀 How It Works](#-how-it-works)
+- [⚙️ Configuration](#️-configuration)
+- [🧪 Requirements](#-requirements)
+- [▶️ Running the App](#️-running-the-app)
+- [📝 TO DO](#-to-do)
+- [📤 Output](#-output)
+
 ## 🚀 How It Works
 
 1. **Connects to Gmail via IMAP**:
