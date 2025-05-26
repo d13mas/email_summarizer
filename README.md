@@ -38,7 +38,7 @@
 
 ## ⚙️ Configuration
 
-1. Create a `.env` file in your root project directory:
+1. Create a `.env` file in your root project directory (or rename the `env.example` file to .env). Replace with your info, or add the below code.
 
     ```env
     gmail_user=your-gmail-address@gmail.com
