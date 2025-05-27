@@ -1,17 +1,17 @@
-# ✉️ Email Summarizer
+# Email Summarizer
 
 **Email Summarizer** automatically summarizes emails received in a Gmail inbox using OpenAI's GPT-3.5 Turbo model. It was originally designed to condense long-form newsletters, but it can be used for any kind of content.
 
-## 📚 Table of Contents
+## Table of Contents
 
-- [🚀 How It Works](#-how-it-works)
-- [⚙️ Configuration](#️-configuration)
-- [🧪 Requirements](#-requirements)
-- [📤 Output](#-output)
-- [▶️ Running the App](#️-running-the-app)
-- [📝 TO DO](#-to-do)
+- [1. How It Works](#-how-it-works)
+- [2. Configuration](#️-configuration)
+- [3. Requirements](#-requirements)
+- [4. Output](#-output)
+- [5. Running the App](#️-running-the-app)
+- [6. TO DO](#-to-do)
 
-## 🚀 How It Works
+## 1. How It Works
 
 1. **Connects to Gmail via IMAP**:
    - You can use your main Gmail account or create a **forwarding-only Gmail inbox** to isolate newsletters or long emails for summarization.
@@ -36,7 +36,7 @@
    - Only emails that are successfully summarized and sent are marked as **read**.
    - This prevents reprocessing on future runs.
 
-## ⚙️ Configuration
+## 2. Configuration
 
 1. Create a `.env` file in your root project directory (or rename the `env.example` file to .env). Replace with your info, or add the below code.
 
@@ -58,7 +58,7 @@
      ]
      ```
 
-## 🧪 Requirements
+## 3. Requirements
 
 Install the dependencies with:
 
@@ -67,13 +67,14 @@ pip install -r requirements.txt
 ```
 
 This includes:
+
 - `imapclient`
 - `openai`
 - `tiktoken`
 - `pydantic`
 - `python-dotenv`
 
-## 📤 Output
+## 4. Output
 
 Summaries are sent via email to the configured `email_recipient`. In the future, you may optionally:
 
@@ -81,7 +82,7 @@ Summaries are sent via email to the configured `email_recipient`. In the future,
 - Archive source emails
 - Trigger webhook or API notifications
 
-## ▶️ Running the App
+## 5. Running the App
 
 Make sure you've completed the setup in your `.env` and `config.py` files.
 
@@ -91,15 +92,15 @@ Then run the program using:
 python -m email_summarizer_pkg.main
 ```
 
-## 📝 TO DO
+## 6. TO DO
 
 1. **Web Frontend (Flask + React)**:
    - Build a hosted web UI version for general users.
    - Features to include:
-     - 🔐 Account registration & login
-     - 🛡️ Authentication
-     - 🔐 Secure storage for Gmail/app credentials
-     - 🧩 UI to configure sender list, model options, and view output
+     - Account registration & login
+     - Authentication
+     - Secure storage for Gmail/app credentials
+     - UI to configure sender list, model options, and view output
 
 2. **Enhance summarization pipeline**:
    - Summarize individual chunks → summarize combined chunk summaries (multi-pass summarization)
